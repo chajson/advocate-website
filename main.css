@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: auto;
+  background-color: #888888;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  width: auto;
+  height: 100%;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  color: #ffffff;
+  background-color: #333333;
+  transition-duration: .5s;
+  font-size: 1.5em;
+}
+.activeHamb {
+  position: absolute;
+  z-index: 1;
+}
+
+button {
+  position: fixed;
+}
+
+ul {
+  height: 100%;
+  width: auto;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-text: center;
+}
+li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+}
+
+.hidden {
+  position: relative;
+  transform:translate(100vw);
+  transition-duration: .5s;
+  opacity: 0;
+}
+
+.navigation-active {
+  background-color: #222222;
+}
+.aboutMe {
+  position: relative;
+  word-wrap: break-word;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  font-size: 1.3em;
+}
