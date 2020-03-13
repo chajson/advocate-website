@@ -21,14 +21,14 @@
     <h1>Paweł Kukulski  twój adwokat</h1>
     <p>
     </p>
-    <a href="#section-b" class="btn">Read More</a>
+    <a data-scroll href="#about" class="btn">O mnie</a>
   </div>
 </header>
 
 <!-- Main Area -->
 <main id="main">
   <!-- Section A -->
-  <section class="section-a grid">
+  <section id="about" class="section-a grid">
     <div class="content-wrap">
       <h2 class="content-title">O mnie</h2>
       <div class="content-text">
@@ -96,9 +96,14 @@
   <div>Adwokat Pawel Kukulski</div>
   <div>Project By Piotr Chaja</div>
 </footer>
-
 <script src="script.js" rel="script"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="./static/move.js-master/move.min.js" rel="script"></script>
+<script>
+    const scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000
+    });
+</script>
 </body>
 
 </html>

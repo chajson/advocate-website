@@ -1,5 +1,4 @@
 
-
 const burger = document.querySelector('.hamburger');
 burger.addEventListener('click', () => {
   const nav = document.querySelector('.navigation');
