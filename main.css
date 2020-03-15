@@ -159,25 +159,6 @@ nav:after {
   }
 }
 
-
-.btn {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  padding: 1em 2em;
-  border: 1px solid #666;
-  margin: 0.5em 0;
-  transition: ease-in-out .2s;
-
-}
-
-.btn:hover {
-  background: #eaeaea;
-  color: #333;
-  transition: ease-in-out .2s;
-}
-
 .hamburger {
   position: absolute;
   margin: 5% 0 0 80%;
