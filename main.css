@@ -220,7 +220,7 @@ nav:after {
 
 .section-a .content-wrap {
   padding: 0 1.5em;
-  text-align: left;
+  text-align: justify;
   background-color: white;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05)
 }

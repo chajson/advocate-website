@@ -2,7 +2,12 @@
 const burger = document.querySelector('.hamburger');
 const menuLinks = document.querySelectorAll('.menuLink');
 
-const map = L.map('mapid').setView([51.505, -0.09], 13);
+const map = L.map('mapid').setView([50.882686, 20.597110], 13);
+ L.marker([50.882686, 20.597110]).addTo(map);
+
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 500
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
