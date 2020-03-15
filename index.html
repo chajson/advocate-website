@@ -1,27 +1,53 @@
 <!doctype html>
-<html class="no-js" lang="pl">
+<html lang="pl">
 
 <head>
   <meta charset="utf-8">
-  <title>Adwokat Paweł Kukulski</title>
+  <title>Kancelaria Adwokacka</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link href="static/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+          integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+          crossorigin=""></script>
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
 </head>
 
 <body>
 <header id="showcase" class="grid">
+  <button class="hamburger hamburger--emphatic" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner" ></span>
+  </span>
+  </button>
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a class="menuLink" href="#about">O mnie</a></li>
+        <li><a class="menuLink" href="#work">Zakres uslug</a></li>
+        <li><a class="menuLink" href="#section-c">Blog</a></li>
+        <li><a class="menuLink" href="#section-d">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="bg-image"></div>
   <div class="content-wrap">
     <img class="logo" src="static/logo.png">
-    <h1>Adwokat Paweł Kukulski</h1>
+    <h1>Kancelaria Adwokacka</h1>
+    <h2>Adwokat Paweł Kukulski</h2>
     <p>
     </p>
-    <a data-scroll href="#about" class="btn">O mnie</a>
+      <a data-scroll href="#about">
+        <div class="arrow"></div>
+      </a>
+    </div>
+    <div id="full"></div>
   </div>
 </header>
 
@@ -66,7 +92,7 @@
       </li>
     </ul>
   </section>
-  <section class="section-a grid">
+  <section class="section-a grid" id="work">
     <div class="content-wrap">
       <h2 class="content-title">Zakres usług</h2>
       <div class="content-text">
@@ -74,19 +100,40 @@
           W ramach prowadzonej przez mnie działalności gospodarczej w formie Kancelarii Adwokackiej oferuję obsługę prawną dla osób fizycznych oraz podmiotów gospodarczych. Swoje usługi świadczę na obszarze właściwości Świętokrzyskiej Izby Adwokackiej, a ponadto na terenie całego kraju.
           Służę pomocą prawną w zakresie udzielanych porad prawnych, reprezentacji klienta przed sądami i urzędami, a także w procesie polubownego załatwiania sporów. Ponadto pośredniczę przy zawieraniu umów z kontrahentami, a także sporządzam projekty umów oraz analizuję przedstawione przez Państwa projekty umów lub też umowy już zawarte.<br><br>
           W ramach pomocy prawnej świadczonej dla osób fizycznych, oferuję usługi w zakresie wszystkich powszechnych dziedzin prawa, z którymi przychodzi zmierzyć się w codziennej praktyce. Należy tutaj wymienić m.in. problemy związane z:<br><br>
-          - prawem karnym, karnym skarbowym, wykroczeniowym <br><br>– obejmujące postępowanie w fazie przygotowawczej, udział w rozprawach głównych i posiedzeniach, stała obrona w sprawach karnych, postępowanie odwoławcze i kasacyjne oraz postępowanie wykonawcze. W ramach świadczonych usług z tej kategorii świadczę również usługi w zakresie wznowienia postępowania,
+         <ul>
+        <li> <b>Prawem karnym, karnym skarbowym, wykroczeniowym</b> <br><br>obejmujące postępowanie w fazie przygotowawczej, udział w rozprawach głównych i posiedzeniach, stała obrona w sprawach karnych, postępowanie odwoławcze i kasacyjne oraz postępowanie wykonawcze. W ramach świadczonych usług z tej kategorii świadczę również usługi w zakresie wznowienia postępowania,
           a także odszkodowania za niesłuszne skazanie lub niesłuszne tymczasowe aresztowanie. Dodatkowo oferuję pomoc osobom pokrzywdzonym przestępstwem, reprezentując ich interesy jako pełnomocnik w toczącym się procesie, w tym jako oskarżyciel posiłkowy czy prywatny.
-          <br><br>
-          - prawem cywilnym, rodzinnym i opiekuńczym, spadkowym, rzeczowym – obejmujące postępowanie przedsądowe (mediacja, polubowne załatwianie sposób, przedsądowa windykacja należności), ale również postępowania w zasadniczej fazie przez sądami powszechnymi. W ramach tej dziedziny zajmuje się wszelkimi sprawami, stanowiącymi najczęstsze postępowania z
+         </li><br><br>
+        <li><b>Prawem cywilnym, rodzinnym i opiekuńczym, spadkowym, rzeczowym</b><br><br>Obejmujące postępowanie przedsądowe (mediacja, polubowne załatwianie sposób, przedsądowa windykacja należności), ale również postępowania w zasadniczej fazie przez sądami powszechnymi. W ramach tej dziedziny zajmuje się wszelkimi sprawami, stanowiącymi najczęstsze postępowania z
           udziałem osób fizycznych i prawnych, jak np. sprawy o zapłatę, o alimenty, o pozbawienie i ograniczenie władzy rodzicielskiej, o ustalenie kontaktów z dzieckiem, o rozwód, o podział majątku wspólnego, o ochronę dóbr osobistych, o odszkodowanie i zadośćuczynienie, o stwierdzenie nabycia spadku i o dział spadku, o zachowek oraz sprawy dot. testamentów, sprawy o zniesienie współwłasności, o naruszenie własności i posiadania, o eksmisję, o zasiedzenie i rozgraniczenie, a także sprawy wieczystoksięgowe. Oferuję reprezentację klienta przed sądami I oraz II instancji, a także przed Sądem Najwyższym na skutek sporządzenia i wniesienia skargi kasacyjnej oraz reprezentację na etapie postępowania egzekucyjnego. W ramach tej dziedziny oferuję również szeroko pojętą pomoc i wsparcie dla konsumentów w sporach z przedsiębiorcami wynikającymi z przysługującymi im uprawnieniami konsumenckimi.
-          <br><br>
-          - prawem administracyjnym – reprezentowanie osób przed organami administracji publicznej w sprawach odwołań od decyzji organów I instancji i skarg na decyzje organów II instancji do wojewódzkich sądów administracyjnych, wraz z postępowaniem kasacyjnym. Dotyczy to w szczególności sporządzania na tych etapach pism procesowych (odwołanie, skarga, wnioski dowodowe, zastrzeżenia, zarzuty) oraz reprezentacja przed sądami i organami na mocy udzielonego pełnomocnictwa.
-          <br><br>
-          - prawem pracy – reprezentowanie pracowników w sporach z pracodawcami i zakładem pracy, co dotyczy głównie spraw o wydanie świadectwa pracy, o zapłatę zaległego wynagrodzenie, o odszkodowanie za niesłuszne wypowiedzenie stosunku pracy względnie o przywrócenie do pracy i uznanie wypowiedzenia za bezskuteczne, a także powództwa o mobbing czy o nawiązanie stosunku pracy.
-          <br><br>
+          </li><br><br>
+          <li><b>Prawem administracyjnym</b><br><br>Reprezentowanie osób przed organami administracji publicznej w sprawach odwołań od decyzji organów I instancji i skarg na decyzje organów II instancji do wojewódzkich sądów administracyjnych, wraz z postępowaniem kasacyjnym. Dotyczy to w szczególności sporządzania na tych etapach pism procesowych (odwołanie, skarga, wnioski dowodowe, zastrzeżenia, zarzuty) oraz reprezentacja przed sądami i organami na mocy udzielonego pełnomocnictwa.
+          </li><br><br>
+        <li><b>Prawem pracy</b><br><br>Reprezentowanie pracowników w sporach z pracodawcami i zakładem pracy, co dotyczy głównie spraw o wydanie świadectwa pracy, o zapłatę zaległego wynagrodzenie, o odszkodowanie za niesłuszne wypowiedzenie stosunku pracy względnie o przywrócenie do pracy i uznanie wypowiedzenia za bezskuteczne, a także powództwa o mobbing czy o nawiązanie stosunku pracy.
+          </li> <br><br>
           Ponadto zajmuje się obsługą podmiotów gospodarczych, w ramach której oferuję przygotowywanie i opracowywanie projektów umów zawieranych pomiędzy przedsiębiorcami, bieżącą obsługę prawną (w tym sporządzanie pism procesowych, składanie ich w sądach i urzędach, występowanie przed sądami i urzędami, obsługa postępowania egzekucyjnego), jak również sporządzanie szczegółowych i fachowych opinii prawnych. Ponadto, oferuję reprezentację podmiotów w postępowaniach przed Sądem Rejestrowym w ramach postępowania rejestrowego (w tym wpisy do Krajowego Rejestru Sądowego oraz innych rejestrów publicznych).
+      </ul>
         </p>
       </div>
+    </div>
+  </section>
+  <section id="section-c" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">Blog</h2>
+      <p>Strona w budowie.</p>
+    </div>
+  </section>
+  <section id="section-d"class="grid">
+    <div class="box">
+      <h2 class="content-title">Kontakt</h2>
+      <h3 class="content-title">Kancelaria Adwokacka Adwokat Paweł Kukulski</h3>
+      <p>Telefon: 692 969 690</p>
+      <p>E-mail: adw.pawel.kukulski@gmail.com</p>
+      <p>Godziny pracy kancelarii:</p>
+      <p>pn-pt 8:00-16:00</p>
+      <p> W sobotę - na życzenie klienta</p>
+    </div>
+    <div class="box" id="mapid">
     </div>
   </section>
 </main>
@@ -94,14 +141,14 @@
   <div>Adwokat Pawel Kukulski</div>
   <div>Project By Piotr Chaja</div>
 </footer>
-<script src="script.js" rel="script"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="./static/move.js-master/move.min.js" rel="script"></script>
 <script>
     const scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 1000
+        speed: 500
     });
 </script>
+<script src="script.js" rel="script"></script>
 </body>
 
 </html>
